@@ -4,14 +4,7 @@ $(document).ready(onInit)
 
 function onInit() {
     renderProjects()
-    // renderModals()
-    // console.log('onInit runing')
-    // $('.modal-btn').each((idx)=>{
-    //     console.log(idx)
-    //     console.log(this)
-    //     $(this).click(onModalClick)
-
-    // })
+    $('form .btn-primary').click(onFormSubmit)
 }
 
 function renderProjects() {
@@ -32,21 +25,40 @@ function renderProjects() {
             </div>
         </div>`
     )
-    $('#projects-section').html(strHtmls.join('')) 
+    $('#projects-section').html(strHtmls.join(''))
     $('.portfolio-link').click(onModalClick)
 }
 
 function renderModal(elProject) {
     const projId = elProject.dataset.projectId
     const project = getProjectById(projId)
-    console.log(project)
-    $('#portfolioModal1 h2').text(project.name)
+    $('#portfolioModal h2').text(project.name)
+    $('#portfolioModal p.item-intro.text-muted').text(project.title)
+    $('#portfolioModal img').attr("src", `img/my-projects/${project.id}.png`)
+    $('#portfolioModal p.desc-p').text(project.desc)
+    $('#portfolioModal span.date-span').text(project.publishedAt)
+    $('#portfolioModal span.category-span').text(project.labels)
+    // $('#portfolioModal1 span.client-span').text(project.desc)
+    $('#portfolioModal button.modal-btn').click(function () {
+        onGoToProjClick(project.url)
+    })
 }
 
-function onModalClick(ev){
+function onModalClick() {
     renderModal(this)
-    $('#portfolioModal1').modal('toggle')
+    $('#portfolioModal').modal('toggle')
+}
 
-    // console.log(ev)
-    // console.log(this.dataset.projectId)
+function onGoToProjClick(url) {
+    window.open(url)
+}
+
+function onFormSubmit(){
+    // const email = $('.form-email').val()
+    const subject = $('.form-subject').val()
+    const message = $('.form-message').val()
+
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=yorklidor@gmail.com.com&su=${subject}&body=${message}`)
+
+    
 }
