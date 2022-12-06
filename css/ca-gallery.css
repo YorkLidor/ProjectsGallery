@@ -2,6 +2,9 @@ body {
     overflow-x: hidden;
     font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+.img-main-display-proj{
+    height: 100%;
+}
 p {
     line-height: 1.75;
 }
@@ -245,6 +248,8 @@ header.masthead .intro-text .intro-heading {
 }
 
 #portfolio .portfolio-item {
+    display: flex;
+    flex-direction: column;
     right: 0;
     margin: 0 0 15px;
 }
@@ -254,6 +259,7 @@ header.masthead .intro-text .intro-heading {
     max-width: 400px;
     margin: 0 auto;
     cursor: pointer;
+    flex-grow: 1;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
@@ -278,6 +284,7 @@ header.masthead .intro-text .intro-heading {
     text-align: center;
     color: white;
 }
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
     margin-top: -12px;
 }
@@ -291,6 +298,7 @@ header.masthead .intro-text .intro-heading {
     padding: 25px;
     text-align: center;
     background-color: white;
+    width: 100%;
 }
 #portfolio .portfolio-item .portfolio-caption h4 {
     margin: 0;

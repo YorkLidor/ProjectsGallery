@@ -17,7 +17,7 @@ function renderProjects() {
                     <i class="fa fa-plus fa-3x"></i>
                 </div>
                 </div>
-                <img class="img-fluid" src="img/my-projects/${proj.id}.png" alt="">
+                <img class="img-fluid img-main-display-proj" src="img/my-projects/${proj.id}.png" alt="">
             </div>
             <div class="portfolio-caption">
                 <h4>${proj.name}</h4>
@@ -53,12 +53,9 @@ function onGoToProjClick(url) {
     window.open(url)
 }
 
-function onFormSubmit(){
-    // const email = $('.form-email').val()
+function onFormSubmit() {
+    const email = $('.form-email').val()
     const subject = $('.form-subject').val()
-    const message = $('.form-message').val()
-
+    const message = email + '%0D%0A' + $('.form-message').val()
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=yorklidor@gmail.com.com&su=${subject}&body=${message}`)
-
-    
 }
