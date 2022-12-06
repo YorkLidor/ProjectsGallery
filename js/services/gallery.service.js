@@ -9,8 +9,11 @@ function getProjects() {
 
 function _createProjects() {
     gProjects = [
+        _createProject('pacman', 'Pac Man', 'Eat them all', 'aaa', 'https://www.google.co.il/?gws_rd=cr&ei=V_zxUt6XE8yX4wTonoDABwsadasdsad', Date.now(), ["Matrixes", "keyboard events"]),
+        _createProject('bookshop', 'Book Shop', 'Mange your store', 'bbb', 'https://www.google.co.il/?gws_rd=cr&ei=V_zxUt6XE8yX4wTad', Date.now(), ["Matrixes", "keyboard events"]),
+        _createProject('minesweeper', 'Minesweeper', 'Stay away from the bombs', 'ccc', 'https://www.google.co.il/?gws_rd=cr&ei=V_zxUt6XE8yX4wTonoDABwsadasdsad', Date.now(), ["Matrixes", "keyboard events"]),
+        _createProject('touchnums', 'Touch Nums', 'Follow the numbers', 'ddd', 'https://www.google.co.il/?gws_rd=cr&ei=V_zxUt6XE8yX4wTonoDABwsadasdsad', Date.now(), ["Matrixes", "keyboard events"]),
         _createProject('pacman', 'Pac Man', 'Eat them all', 'ssad', 'https://www.google.co.il/?gws_rd=cr&ei=V_zxUt6XE8yX4wTonoDABwsadasdsad', Date.now(), ["Matrixes", "keyboard events"]),
-        _createProject('bookshop', 'Book Shop', 'Mange your store', 'sadsadsadsadsadsad', 'https://www.google.co.il/?gws_rd=cr&ei=V_zxUt6XE8yX4wTonoDABwsadasdsad', Date.now(), ["Matrixes", "keyboard events"]),
     ]
 }
 
